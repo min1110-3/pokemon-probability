@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포켓몬 카드 확률 계산기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>포켓몬 카드 확률 계산기</h1>
+        <div class="container">
+            <div class="settings">
+                <div class="setting-item">
+                    <label>덱 크기:</label>
+                    <input type="number" id="deckSize" value="40" min="1" max="60">
+                    <p class="info">현재 추가된 카드: <span id="currentCardCount">0</span>장</p>
+                </div>
+                <div class="setting-item">
+                    <label>받는 카드 수:</label>
+                    <input type="number" id="handSize" value="7" min="1" max="7">
+                </div>
+            </div>
+
+            <div class="card-input">
+                <h2>카드 추가</h2>
+                <div class="input-group">
+                    <input type="text" id="cardName" placeholder="카드 이름">
+                    <input type="number" id="cardCount" value="1" min="1" max="20">
+                    <button id="addCard">추가</button>
+                </div>
+                <p class="error" id="errorMessage"></p>
+            </div>
+
+            <div class="card-list">
+                <h2>카드 목록</h2>
+                <div id="cardListContainer"></div>
+            </div>
+
+            <div class="probability-results">
+                <h2>확률 계산 결과</h2>
+                <div id="probabilityContainer"></div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
